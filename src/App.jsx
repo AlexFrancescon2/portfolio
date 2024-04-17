@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  return <>My tokens</>;
+  return <>My tokens!</>;
 }
 
 export default App;
