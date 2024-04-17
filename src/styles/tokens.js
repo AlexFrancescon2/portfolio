@@ -1,4 +1,17 @@
-export const colors = {};
+export const colors = {
+  white: "#f8fafc",
+  white2: "#f1f5f9",
+  grey1: "#94a3b8",
+  grey2: "#64748b",
+  grey3: "#475569",
+  grey4: "#334155",
+  grey5: "#1e293b",
+  grey6: "#0f172a",
+  black: "#020617",
+  blue1: "#2563eb",
+  blue2: "#1d4ed8",
+  red1: "#e11d48",
+};
 
 export const shadows = colors;
 
@@ -10,41 +23,54 @@ export const fonts = {
 
 export const space = {
   1: "2px",
-  2: "4px",
-  3: "8px",
-  4: "16px",
-  5: "24px",
-  6: "32px",
-  7: "40px",
-  8: "48px",
-  9: "56px",
-  10: "64px",
+  2: "2px",
+  4: "4px",
+  8: "8px",
+  16: "16px",
+  24: "24px",
+  32: "32px",
+  40: "40px",
+  48: "48px",
+  56: "56px",
+  64: "64px",
 };
 
 export const sizes = {
-  1: "2px",
-  2: "4px",
-  3: "8px",
-  4: "16px",
-  5: "24px",
-  6: "32px",
-  header: "60px",
+  2: "2px",
+  4: "4px",
+  8: "8px",
+  16: "16px",
+  20: "20px",
+  24: "24px",
+  28: "28px",
+  32: "32px",
+  364: "64px",
 };
 
 export const fontSizes = {
-  1: "12px",
-  2: "13px",
-  3: "14px",
-  4: "15px",
-  5: "17px",
-  6: "20px",
-  7: "21px",
-  8: "27px",
-  9: "35px",
-  10: "45px",
-  11: "55px",
-  12: "70px",
-  13: "85px",
+  12: "12px",
+  13: "13px",
+  14: "14px",
+  15: "15px",
+  16: "16px",
+  17: "17px",
+  20: "20px",
+  21: "21px",
+  27: "27px",
+  35: "35px",
+  45: "45px",
+  55: "55px",
+  70: "70px",
+  85: "85px",
+};
+
+export const radii = {
+  2: "2px",
+  4: "4px",
+  8: "8px",
+  12: "12px",
+  round: "50%",
+  pill: "9999px",
 };
 
 export const zIndices = {
@@ -64,10 +90,6 @@ export const media = {
   bp3max: "(max-width: 1024px)",
   bp4min: "(min-width: 1400px)",
   bp4max: "(max-width: 1400px)",
-  motion: "(prefers-reduced-motion)",
-  hover: "(any-hover: hover)",
-  dark: "(prefers-color-scheme: dark)",
-  light: "(prefers-color-scheme: light)",
 };
 
 export const boxShadows = {

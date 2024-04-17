@@ -1,7 +1,7 @@
-import "./App.css";
+import { Main } from "@/components/main";
 
 function App() {
-  return <>My tokens!</>;
+  return <Main />;
 }
 
 export default App;
