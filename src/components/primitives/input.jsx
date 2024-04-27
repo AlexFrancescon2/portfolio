@@ -4,6 +4,11 @@ import { css } from "@/styles/system";
 import { Div } from "@/components/primitives/div";
 import { Text } from "@/components/primitives/text";
 
+import {
+  directionSpacingVariants,
+  fieldSizes,
+} from "@/components/primitives/common";
+
 export const Input = ({
   id,
   name,
@@ -99,46 +104,8 @@ const wrapper = css({
   display: "flex",
   width: "100%",
   variants: {
-    hasSpaceBottom: {
-      true: {
-        marginBottom: "$8",
-      },
-    },
-    hasSpaceTop: {
-      true: {
-        marginTop: "$8",
-      },
-    },
-    hasSpaceLeft: {
-      true: {
-        marginLeft: "$8",
-      },
-    },
-    hasSpaceRight: {
-      true: {
-        marginRight: "$8",
-      },
-    },
-    size: {
-      xs: {
-        width: "60px",
-      },
-      small: {
-        width: "200px",
-      },
-      medium: {
-        width: "300px",
-      },
-      large: {
-        width: "400px",
-      },
-      xl: {
-        width: "800px",
-      },
-      full: {
-        width: "100%",
-      },
-    },
+    ...directionSpacingVariants,
+    size: fieldSizes,
   },
 });
 const styles = css({
@@ -161,6 +128,6 @@ const styles = css({
     cursor: "not-allowed !important",
   },
   "&::placeholder": {
-    color: "$grey5",
+    color: "$grey1",
   },
 });

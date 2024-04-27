@@ -1,5 +1,6 @@
 import React from "react";
-import { css } from "@/styles/system";
+import { css, keyframes } from "@/styles/system";
+import { directionSpacingVariants } from "@/components/primitives/common";
 
 export const Button = ({
   type = "button",
@@ -11,6 +12,8 @@ export const Button = ({
   isDisabled,
   hasSpaceRight,
   hasSpaceTop,
+  hasSpaceLeft,
+  hasSpaceBottom,
   isAuthorized = true,
   isAlignedRight,
   children,
@@ -34,6 +37,8 @@ export const Button = ({
           isDisabled,
           hasSpaceRight,
           hasSpaceTop,
+          hasSpaceLeft,
+          hasSpaceBottom,
           isAuthorized,
           isFullWidth,
           css,
@@ -64,6 +69,12 @@ const wrapper = css({
   },
 });
 
+const focusKeyframe = keyframes({
+  "0%": { filter: "brightness(5%)" },
+  "50%": { filter: "brightness(6%)" },
+  "100%": { filter: "brightness(7%)" },
+});
+
 export const styles = css({
   display: "inline-flex",
   alignItems: "center",
@@ -78,6 +89,9 @@ export const styles = css({
   whiteSpace: "nowrap",
   "&:hover": {
     textDecoration: "none",
+  },
+  "&:focus": {
+    outline: "none",
   },
   variants: {
     variant: {
@@ -121,16 +135,7 @@ export const styles = css({
         background: "transparent",
       },
     },
-    hasSpaceRight: {
-      true: {
-        marginRight: "$2",
-      },
-    },
-    hasSpaceTop: {
-      true: {
-        marginTop: "$4",
-      },
-    },
+    ...directionSpacingVariants,
     isInline: {
       true: {
         borderTopLeftRadius: 0,

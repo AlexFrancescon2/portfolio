@@ -3,22 +3,36 @@ import { Div } from "@/components/primitives/div";
 import { Input } from "@/components/primitives/input";
 import { TextArea } from "@/components/primitives/textarea";
 import { Button } from "@/components/primitives/button";
+import { Select } from "@/components/primitives/select/select";
 
 export const Main = () => {
   return (
     <div className={wrapper()}>
       <Div css={boxStyle}>
-        <Input label={"Input"} size={"small"} hasWhiteLabel hasSpaceBottom />
+        <Div isFlex>
+          <Input
+            label={"Input"}
+            size={"small"}
+            hasWhiteLabel
+            hasSpaceBottom
+            placeholder="An Input field"
+          />
+          <Select label={"Select"} size={"small"} hasWhiteLabel hasSpaceBottom>
+            <Select.Option>Test</Select.Option>
+          </Select>
+        </Div>
+
         <TextArea
           label={"Textarea"}
           resizeDirection="right"
           size={"large"}
           hasWhiteLabel
           hasSpaceBottom
+          placeholder="A textarea field"
           css={{ maxWidth: "100%", maxHeight: "100px" }}
         />
         <Button color={"blue"} hasSpaceTop>
-          Click!{" "}
+          Click!
         </Button>
       </Div>
     </div>

@@ -4,6 +4,8 @@ import { css } from "@/styles/system";
 import { Text } from "@/components/primitives/text";
 import { Div } from "@/components/primitives/div";
 
+import { directionSpacingVariants } from "@/components/primitives/common";
+
 export const TextArea = ({
   value,
   onChange,
@@ -70,31 +72,15 @@ const styles = css({
   maxHeight: "100%",
   color: "$black",
   background: "$white",
+  "&::placeholder": {
+    color: "$grey1",
+  },
   "&:focus-visible": {
     border: "1px solid $blue1",
     outline: "none",
   },
   variants: {
-    hasSpaceBottom: {
-      true: {
-        marginBottom: "$8",
-      },
-    },
-    hasSpaceTop: {
-      true: {
-        marginTop: "$8",
-      },
-    },
-    hasSpaceLeft: {
-      true: {
-        marginLeft: "$8",
-      },
-    },
-    hasSpaceRight: {
-      true: {
-        marginRight: "$8",
-      },
-    },
+    ...directionSpacingVariants,
     resizeDirection: {
       all: {
         resize: "both",
