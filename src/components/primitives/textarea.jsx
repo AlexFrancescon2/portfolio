@@ -71,10 +71,6 @@ const styles = css({
   ...fieldsCommonStyles,
   maxWidth: "100%",
   maxHeight: "100%",
-  "&:focus-visible": {
-    border: "1px solid $blue1",
-    outline: "none",
-  },
   variants: {
     ...directionSpacingVariants,
     resizeDirection: {

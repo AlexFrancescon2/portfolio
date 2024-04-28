@@ -11,6 +11,8 @@ export const colors = {
   blue1: "#2563eb",
   blue2: "#1d4ed8",
   red1: "#e11d48",
+  primary: "#2563eb",
+  secondary: "",
 };
 
 export const shadows = colors;
@@ -22,13 +24,16 @@ export const fonts = {
 };
 
 export const space = {
-  1: "2px",
+  1: "1px",
   2: "2px",
   4: "4px",
   8: "8px",
   16: "16px",
+  20: "20px",
   24: "24px",
+  28: "28px",
   32: "32px",
+  36: "36px",
   40: "40px",
   48: "48px",
   56: "56px",

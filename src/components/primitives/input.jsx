@@ -113,15 +113,4 @@ const styles = css({
   outline: "none",
   width: "100%",
   transition: "border-color ease-in-out .15s, box-shadow ease-in-out .15s",
-  "&:focus": {
-    borderColor: "$blue1",
-  },
-  "&:disabled": {
-    border: "1px solid $grey4",
-    background: "$grey2",
-    cursor: "not-allowed !important",
-  },
-  "&::placeholder": {
-    color: "$grey1",
-  },
 });

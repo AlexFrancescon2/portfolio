@@ -4,6 +4,7 @@ import { Input } from "@/components/primitives/input";
 import { TextArea } from "@/components/primitives/textarea";
 import { Button } from "@/components/primitives/button";
 import { Select } from "@/components/primitives/select/select";
+import { Accordion } from "@/components/primitives/accordion/accordion";
 
 export const Main = () => {
   return (
@@ -33,9 +34,16 @@ export const Main = () => {
           placeholder="A textarea field"
           css={{ maxWidth: "100%", maxHeight: "100px" }}
         />
-        <Button color={"blue"} hasSpaceTop>
+        <Button color={"blue"} hasSpaceTop hasSpaceBottom>
           Click!
         </Button>
+
+        <Accordion hasSpaceTop>
+          <Accordion.Item title="First Item">Hidden text!</Accordion.Item>
+          <Accordion.Item title="Second Item">
+            Second Hidden text!
+          </Accordion.Item>
+        </Accordion>
       </Div>
     </div>
   );

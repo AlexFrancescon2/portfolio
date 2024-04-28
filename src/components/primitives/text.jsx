@@ -17,7 +17,6 @@ export const Text = ({
   hasEllipsis,
   noWrap,
   css,
-  role,
 }) => {
   return (
     <>
