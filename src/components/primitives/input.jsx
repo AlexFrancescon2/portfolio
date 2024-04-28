@@ -7,6 +7,7 @@ import { Text } from "@/components/primitives/text";
 import {
   directionSpacingVariants,
   fieldSizes,
+  fieldsCommonStyles,
 } from "@/components/primitives/common";
 
 export const Input = ({
@@ -99,7 +100,6 @@ export const Input = ({
 };
 
 const wrapper = css({
-  color: "$black",
   position: "relative",
   display: "flex",
   width: "100%",
@@ -109,14 +109,8 @@ const wrapper = css({
   },
 });
 const styles = css({
-  padding: "$4 $4",
-  height: "$28",
-  background: "white",
-  border: "1px solid $grey4",
-  borderRadius: "$4",
+  ...fieldsCommonStyles,
   outline: "none",
-  fontFamily: "$normal",
-  color: "$black",
   width: "100%",
   transition: "border-color ease-in-out .15s, box-shadow ease-in-out .15s",
   "&:focus": {

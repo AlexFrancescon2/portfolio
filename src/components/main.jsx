@@ -18,7 +18,9 @@ export const Main = () => {
             placeholder="An Input field"
           />
           <Select label={"Select"} size={"small"} hasWhiteLabel hasSpaceBottom>
-            <Select.Option>Test</Select.Option>
+            <Select.Option>Yes</Select.Option>
+            <Select.Option>No</Select.Option>
+            <Select.Option>Maybe</Select.Option>
           </Select>
         </Div>
 

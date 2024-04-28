@@ -41,3 +41,16 @@ export const directionSpacingVariants = {
     },
   },
 };
+
+export const fieldsCommonStyles = {
+  padding: "$4 $8",
+  minHeight: "$28",
+  background: "$white",
+  border: "1px solid $grey4",
+  borderRadius: "$4",
+  fontFamily: "$normal",
+  color: "$black",
+  "&::placeholder": {
+    color: "$grey1",
+  },
+};

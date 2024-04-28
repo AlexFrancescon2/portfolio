@@ -4,7 +4,11 @@ import { css } from "@/styles/system";
 import { Text } from "@/components/primitives/text";
 import { Div } from "@/components/primitives/div";
 
-import { directionSpacingVariants } from "@/components/primitives/common";
+import {
+  directionSpacingVariants,
+  fieldSizes,
+  fieldsCommonStyles,
+} from "@/components/primitives/common";
 
 export const TextArea = ({
   value,
@@ -64,17 +68,9 @@ export const TextArea = ({
 };
 
 const styles = css({
-  fontFamily: "$normal",
-  padding: "$4 $4",
-  border: "1px solid $grey4",
-  borderRadius: "$4",
+  ...fieldsCommonStyles,
   maxWidth: "100%",
   maxHeight: "100%",
-  color: "$black",
-  background: "$white",
-  "&::placeholder": {
-    color: "$grey1",
-  },
   "&:focus-visible": {
     border: "1px solid $blue1",
     outline: "none",
@@ -95,24 +91,6 @@ const styles = css({
         resize: "none",
       },
     },
-    size: {
-      small: {
-        width: "200px",
-      },
-      medium: {
-        width: "300px",
-      },
-      large: {
-        width: "400px",
-      },
-      full: {
-        width: "100%",
-      },
-    },
-    hasError: {
-      true: {
-        border: "1px solid $red1",
-      },
-    },
+    size: fieldSizes,
   },
 });

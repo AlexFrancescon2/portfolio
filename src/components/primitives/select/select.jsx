@@ -8,6 +8,7 @@ import { Text } from "@/components/primitives/text";
 import {
   directionSpacingVariants,
   fieldSizes,
+  fieldsCommonStyles,
 } from "@/components/primitives/common";
 
 export const Select = ({
@@ -98,15 +99,10 @@ const wrapper = () =>
   });
 
 const styles = css({
+  ...fieldsCommonStyles,
+  height: "38px",
   appearance: "none",
-  padding: "$12 $12",
-  background: "white",
-  border: "1px solid $grey4",
-  borderRadius: "$1",
-  fontSize: "$3",
   outline: "none",
-  fontFamily: "$normal",
-  color: "$grey6",
   width: "100%",
   position: "relative",
   display: "flex",
