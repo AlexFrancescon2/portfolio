@@ -5,47 +5,71 @@ import { TextArea } from "@/components/primitives/textarea";
 import { Button } from "@/components/primitives/button";
 import { Select } from "@/components/primitives/select/select";
 import { Accordion } from "@/components/primitives/accordion/accordion";
+import { useState } from "react";
+import { Modal } from "@/components/primitives/modal/modal";
 
 export const Main = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
   return (
-    <div className={wrapper()}>
-      <Div css={boxStyle}>
-        <Div isFlex>
-          <Input
-            label={"Input"}
-            size={"small"}
+    <>
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+          <Div
+            css={{ backgroundColor: "$white", color: "$black", padding: "$32" }}
+          >
+            TEST
+          </Div>
+        </Modal>
+      )}
+      <div className={wrapper()}>
+        <Div css={boxStyle}>
+          <Div isFlex>
+            <Input
+              label={"Input"}
+              size={"small"}
+              hasWhiteLabel
+              hasSpaceBottom
+              placeholder="An Input field"
+            />
+            <Select
+              label={"Select"}
+              size={"small"}
+              hasWhiteLabel
+              hasSpaceBottom
+            >
+              <Select.Option>Yes</Select.Option>
+              <Select.Option>No</Select.Option>
+              <Select.Option>Maybe</Select.Option>
+            </Select>
+          </Div>
+
+          <TextArea
+            label={"Textarea"}
+            resizeDirection="right"
+            size={"large"}
             hasWhiteLabel
             hasSpaceBottom
-            placeholder="An Input field"
+            placeholder="A textarea field"
+            css={{ maxWidth: "100%", maxHeight: "100px" }}
           />
-          <Select label={"Select"} size={"small"} hasWhiteLabel hasSpaceBottom>
-            <Select.Option>Yes</Select.Option>
-            <Select.Option>No</Select.Option>
-            <Select.Option>Maybe</Select.Option>
-          </Select>
+          <Button
+            color={"blue"}
+            hasSpaceTop
+            hasSpaceBottom
+            onClick={() => setModalOpen(true)}
+          >
+            Click!
+          </Button>
+
+          <Accordion hasSpaceTop>
+            <Accordion.Item title="First Item">Hidden text!</Accordion.Item>
+            <Accordion.Item title="Second Item">
+              Second Hidden text!
+            </Accordion.Item>
+          </Accordion>
         </Div>
-
-        <TextArea
-          label={"Textarea"}
-          resizeDirection="right"
-          size={"large"}
-          hasWhiteLabel
-          hasSpaceBottom
-          placeholder="A textarea field"
-          css={{ maxWidth: "100%", maxHeight: "100px" }}
-        />
-        <Button color={"blue"} hasSpaceTop hasSpaceBottom>
-          Click!
-        </Button>
-
-        <Accordion hasSpaceTop>
-          <Accordion.Item title="First Item">Hidden text!</Accordion.Item>
-          <Accordion.Item title="Second Item">
-            Second Hidden text!
-          </Accordion.Item>
-        </Accordion>
-      </Div>
-    </div>
+      </div>
+    </>
   );
 };
 

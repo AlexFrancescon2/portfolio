@@ -1,9 +1,10 @@
 import React from "react";
-// import { FaSort } from "@react-icons/all-files/fa/FaSort";
+import { FaSort } from "react-icons/fa";
 
 import { css } from "@/styles/system";
 import { SelectOption } from "@/components/primitives/select/option";
 import { Text } from "@/components/primitives/text";
+import { Icon } from "@/components/primitives/icon";
 
 import {
   directionSpacingVariants,
@@ -70,7 +71,7 @@ export const Select = ({
           >
             {children}
           </select>
-          {/* <Icon render={FaSort} hasFloatRight /> */}
+          <Icon render={FaSort} hasFloatRight />
         </div>
       </div>
     </div>
