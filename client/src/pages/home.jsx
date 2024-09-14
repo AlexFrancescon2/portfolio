@@ -1,23 +1,23 @@
-import { Div } from "@/components/primitives/div";
-import { Text } from "@/components/primitives/text";
-import { Link } from "@/components/primitives/link";
-import { useLanguage } from "@/assets/translations/languageProvider";
-import { FixedInfo } from "@/components/shared/fixed";
-import { useLocation } from "react-router-dom";
-import { useGetQueryParams } from "@/hooks/get-queryparams";
 import { About } from "@/pages/about";
-import { Experience } from "@/pages/experience";
-import { useRef } from "react";
 import { Contacts } from "@/pages/contacts";
+import { Div } from "@/components/primitives/div";
+import { Experience } from "@/pages/experience";
+import { FixedInfo } from "@/components/shared/fixed";
+import { Link } from "@/components/primitives/link";
 import { Projects } from "@/pages/projects";
+import { Text } from "@/components/primitives/text";
+import { useGetQueryParams } from "@/hooks/get-queryparams";
+import { useLanguage } from "@/assets/translations/languageProvider";
+import { useLocation } from "react-router-dom";
+import { useRef } from "react";
 
 const Section = ({ children }) => {
   return (
     <section
       style={{
         minHeight: "100vh",
-        scrollSnapAlign: "center",
-        perspective: "500px",
+        scrollSnapAlign: "start",
+        marginBottom: "30vh",
       }}
     >
       <div>{children}</div>
@@ -61,6 +61,7 @@ export const Home = () => {
           <Section>
             <About sectionRef={aboutRef} />
           </Section>
+          <Div css={dividerStyle} />
           <Section>
             <Experience sectionRef={experienceRef} />
           </Section>
@@ -91,4 +92,10 @@ const rightStyle = {
   "@lgmax": {
     width: "100%",
   },
+};
+
+const dividerStyle = {
+  height: "1vh",
+  // scrollSnapAlign: "center",
+  // perspective: "500px",
 };
