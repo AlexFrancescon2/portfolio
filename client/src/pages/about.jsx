@@ -8,11 +8,12 @@ import useIsVisible from "@/hooks/is-visible";
 export const About = ({ sectionRef }) => {
   const queryParams = useGetQueryParams();
   const { setQueryParams } = useSetQueryParams();
-  const [visibleRef, isVisible] = useIsVisible({ threshold: 0.000000001 });
+  const [visibleRef, isVisible] = useIsVisible({ threshold: 0.1 });
 
   useEffect(() => {
     isVisible && setQueryParams({ page: "about" });
   }, [isVisible]);
+
   return (
     <Div css={containerStyle}>
       <div ref={sectionRef}></div>

@@ -1,12 +1,16 @@
+import { useGetQueryParams, useSetQueryParams } from "@/hooks/get-queryparams";
+
+import { Button } from "@/components/primitives/button";
 import { Div } from "@/components/primitives/div";
+import { Icon } from "@/components/primitives/icon";
+import { Input } from "@/components/primitives/input";
+import { RiSendPlaneFill } from "react-icons/ri";
+import { Text } from "@/components/primitives/text";
+import { TextArea } from "@/components/primitives/textarea";
+import { useEffect } from "react";
+import useIsVisible from "@/hooks/is-visible";
 import { useLanguage } from "@/assets/translations/languageProvider";
 import { useLocation } from "react-router-dom";
-import { useGetQueryParams, useSetQueryParams } from "@/hooks/get-queryparams";
-import { Text } from "@/components/primitives/text";
-import useIsVisible from "@/hooks/is-visible";
-import { useEffect } from "react";
-import { Input } from "@/components/primitives/input";
-import { TextArea } from "@/components/primitives/textarea";
 
 export const Contacts = ({ sectionRef }) => {
   const queryParams = useGetQueryParams();
@@ -40,7 +44,14 @@ export const Contacts = ({ sectionRef }) => {
               label="Reason"
               placeholder="Reason"
               css={{ maxHeight: "80px", minWidth: "96%" }}
+              hasSpaceBottom
             ></TextArea>
+            <Div css={footer} isFlex isAlignCenter isJustifyCenter>
+              <Button color="primary">
+                Send
+                <Icon render={RiSendPlaneFill} hasSpaceLeft color="white" />
+              </Button>
+            </Div>
           </div>
         </Div>
       </Div>
@@ -66,4 +77,9 @@ const fieldsContainer = {
   position: "absolue",
   padding: "$80",
   height: "100%",
+};
+
+const footer = {
+  width: "100%",
+  marginTop: "$4",
 };
