@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import { Div } from "@/components/primitives/div";
 import { motion } from "framer-motion";
 
@@ -6,8 +7,8 @@ export const Blob = ({ css, children }) => {
   return (
     <Div css={wrapperStyle}>
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, y: 100, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{
           duration: 0.3,
           ease: [0, 0.71, 0.2, 1.01],
@@ -16,6 +17,7 @@ export const Blob = ({ css, children }) => {
             damping: 5,
             stiffness: 100,
             restDelta: 0.001,
+            ease: "easeOut",
           },
         }}
       >

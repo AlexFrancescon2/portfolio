@@ -17,7 +17,6 @@ const Section = ({ children }) => {
       style={{
         minHeight: "100vh",
         scrollSnapAlign: "start",
-        marginBottom: "30vh",
       }}
     >
       <div>{children}</div>
